@@ -1,0 +1,16 @@
+.cont-table {
+    width: 85%;
+    display: inline-block;
+    /* height: 500px; */
+    /* margin-top: -30%; */
+    position: absolute;
+}
+.color-red{
+    color: #e60808;
+}
+.color-blue{
+    color: #343a40;
+}
+.cursor-pointer{
+    cursor: pointer;
+}

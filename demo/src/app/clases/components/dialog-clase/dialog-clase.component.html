@@ -1,0 +1,20 @@
+<div mat-dialog-content class="example-container">
+    <form [formGroup]="formClase">
+      <mat-form-field appearance="fill">
+          <mat-label>Nombre</mat-label>
+          <input matInput  formControlName="nombre" placeholder="Ingrese la clase*" [(ngModel)]="local_data.nombre">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Duración</mat-label>
+        <input matInput  formControlName="duracion" placeholder="Ingrese la duración en minutos*" [(ngModel)]="local_data.duracion">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+          <mat-label>Curso</mat-label>
+          <input matInput  formControlName="curso" placeholder="Ingrese el curso" [(ngModel)]="local_data.curso">
+      </mat-form-field>
+    </form>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-flat-button color="warn" mat-dialog-close (click)="closeDialog()">Cancelar</button>
+    <button mat-raised-button color="primary"  [disabled]="formClase.invalid" (click)="doAction()">{{action}}</button>
+  </div>

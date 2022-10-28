@@ -1,0 +1,28 @@
+<div mat-dialog-content class="example-container">
+  <form [formGroup]="formAlumno">
+    <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput  formControlName="nombre" placeholder="Ingrese un nombre*" [(ngModel)]="local_data.nombre">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Apellido</mat-label>
+      <input matInput  formControlName="apellido" placeholder="Ingrese su apellio*" [(ngModel)]="local_data.apellido">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Edad</mat-label>
+        <input matInput  formControlName="edad" placeholder="Ingrese un nombre" [(ngModel)]="local_data.edad">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Teléfono</mat-label>
+      <input matInput  formControlName="telefono" placeholder="Ingrese su telefono*" [(ngModel)]="local_data.telefono">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput  formControlName="email" placeholder="Ingrese su email*" [(ngModel)]="local_data.email">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-flat-button color="warn" mat-dialog-close (click)="closeDialog()">Cancelar</button>
+  <button mat-raised-button color="primary"  [disabled]="formAlumno.invalid" (click)="doAction()">{{action}}</button>
+</div>
